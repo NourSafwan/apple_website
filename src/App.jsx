@@ -1,7 +1,7 @@
 import Hero from "./components/Hero";
 import HighLights from "./components/HighLights";
 import Navbar from "./components/Navbar";
-import Model from "./components/model";
+import Model from "./components/Model";
 
 const App = () => {
   return (
