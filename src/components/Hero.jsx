@@ -29,7 +29,7 @@ const Hero = () => {
       delay: 2,
       duration: 1,
       opacity: 1,
-      y: -50,
+      y: -10,
       ease: "power4.out",
     });
     gsap.to(".heroStager", {
