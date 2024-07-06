@@ -59,9 +59,9 @@ const Model = () => {
   return (
     <section className="common-padding">
       <div className="screen-max-width">
-        <h1 id="heading" className="section-heading flex gap-5 items-center">
+        <h1 id="heading" className="section-heading flex gap-5 items-center justify-between">
           <div>Take a closer look.</div>
-          <div className="p-1">
+          <div className="p-1 mr-5">
             <Md3dRotation />
           </div>
         </h1>
