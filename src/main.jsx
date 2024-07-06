@@ -1,20 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import * as Sentry from "@sentry/react";
 import App from "./App.jsx";
 import "./index.css";
-import * as Sentry from "@sentry/react";
 
 Sentry.init({
   dsn: "https://6d80cb218dfb7b16c8f4ac1cd2e1268c@o4507554051391488.ingest.de.sentry.io/4507554082324560",
   integrations: [
-    // Sentry.BrowserTracing(),
     Sentry.browserTracingIntegration(),
-    // Sentry.metrics.metricsAggregatorIntegration(),
     Sentry.replayIntegration(),
     Sentry.reactRouterV6BrowserTracingIntegration({
       useEffect: React.useEffect,
     }),
-    // Sentry.replayIntegration(),
   ],
   tracesSampleRate: 1.0,
   tracePropagationTargets: [
