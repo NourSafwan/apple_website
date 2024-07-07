@@ -57,7 +57,7 @@ const Model = () => {
     });
   });
   return (
-    <section className="common-padding">
+    <section className="common-padding overflow-hidden">
       <div className="screen-max-width">
         <h1 id="heading" className="section-heading flex gap-5 items-center justify-between">
           <div>Take a closer look.</div>
