@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 export const animateWithGsap = (target, animationProps, scrollProps) => {
-  gsap.from(target, {
+  gsap.to(target, {
     ...animationProps,
     scrollTrigger: {
       trigger: target,
