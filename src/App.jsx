@@ -2,6 +2,9 @@ import Hero from "./components/Hero";
 import HighLights from "./components/HighLights";
 import Navbar from "./components/Navbar";
 import Model from "./components/Model";
+import Features from './components/Features';
+import HowItWorks from "./components/HowItWorks";
+import Footer from "./components/Footer";
 
 import * as Sentry from "@sentry/react";
 
@@ -13,6 +16,9 @@ const App = () => {
       <Hero />
       <HighLights />
       <Model />
+      <Features />
+      <HowItWorks />
+      <Footer/>
     </main>
   );
 };
