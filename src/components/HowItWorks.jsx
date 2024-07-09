@@ -12,7 +12,7 @@ const HowItWorks = () => {
       scrollTrigger: {
         trigger: "#chip",
         start: "10% bottom",
-        end: "bottom top",
+        // end: "bottom top",
         toggleActions: "restart reverse restart reverse",
       },
       opacity: 0,
