@@ -60,13 +60,12 @@
 
 ### **Development & Performance**
 - **ESLint** - Code linting and formatting
-- **Sentry** - Error tracking and performance monitoring
-- **Vercel Speed Insights** - Performance analytics
+- **Vite** - Fast production builds and local development
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (version 16 or higher)
+- Node.js 24.x (pinned in `package.json` and `.nvmrc`)
 - npm or yarn package manager
 
 ### Installation
