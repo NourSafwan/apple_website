@@ -1,4 +1,3 @@
-import React from 'react'
 import { footerLinks } from '../constants'
 
 const Footer = () => {
@@ -7,25 +6,17 @@ const Footer = () => {
       <div className="screen-max-width">
         <div>
           <p className="font-semibold text-gray text-xs">
-            More ways to shop: {' '}
-            <span className="underline text-blue">
-            Find an Apple Store {' '}
-            </span>
-            or {' '}
-            <span className="underline text-blue">
-            other retailer
-            </span>{' '}
-            near you.
+            An unofficial front-end study. Not affiliated with Apple.
           </p>
           <p className="font-semibold text-gray text-xs">
-            Or call 1545154-1435-1934
+            No products are sold on this site.
           </p>
         </div>
 
         <div className="bg-neutral-700 my-5 h-[1px] w-full" />
 
         <div className="flex md:flex-row flex-col md:items-center justify-between">
-          <p className="font-semibold text-gray text-xs">Copyright @ 2024 Apple Inc. All rights reserved.</p>
+          <p className="font-semibold text-gray text-xs">Front-end study · 2024</p>
           <div className="flex">
             {footerLinks.map((link, i) => (
               <p key={link} className="font-semibold text-gray text-xs flex">

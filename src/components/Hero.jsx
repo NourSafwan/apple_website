@@ -5,16 +5,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const Hero = () => {
-  const [videoSrc, setVideoSrc] = useState(
+  const [videoSrc, setVideoSrc] = useState(() =>
     window.innerWidth < 760 ? smallHeroVideo : heroVideo
   );
 
   const handleVideoSrcSet = () => {
-    if (window.innerWidth < 760) {
-      setVideoSrc(smallHeroVideo);
-    } else {
-      setVideoSrc(heroVideo);
-    }
+    setVideoSrc(window.innerWidth < 760 ? smallHeroVideo : heroVideo);
   };
 
   useEffect(() => {
@@ -22,7 +18,7 @@ const Hero = () => {
     return () => {
       window.removeEventListener("resize", handleVideoSrcSet);
     };
-  });
+  }, []);
 
   useGSAP(() => {
     gsap.to("#hero", {
@@ -68,12 +64,12 @@ const Hero = () => {
       <div id="cta" className="flex flex-col items-center ">
         <a
           href="#highLights"
-          className="btn heroStager translate-y-20 opacity-0 "
+          className="btn heroStager translate-y-20 opacity-0"
         >
-          Buy
+          Explore
         </a>
-        <p className="font-normal text-xl heroStager translate-y-20 opacity-0 ">
-          from $199/mouth or $999
+        <p className="font-normal text-xl heroStager translate-y-20 opacity-0">
+          A front-end study · from $999
         </p>
       </div>
     </section>

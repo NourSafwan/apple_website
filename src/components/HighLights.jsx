@@ -20,7 +20,7 @@ const HighLights = () => {
   return (
     <section
       id="highLights"
-      className="w-screen overflow-hidden h-full common-padding bg-zinc"
+      className="w-full overflow-hidden h-full common-padding bg-zinc"
     >
       <div className="screen-max-width">
         <div className="mb-12 w-full md:flex items-end justify-between">

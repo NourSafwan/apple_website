@@ -6,17 +6,17 @@ Source: https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841
 Title: Apple iPhone 15 Pro Max Black
 */
 
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
-import  * as THREE  from 'three';
+import * as THREE from "three";
 
-function Model(props) {
+function Model({ item, ...props }) {
   const { nodes, materials } = useGLTF("/models/scene.glb");
 
-  const textuer = useTexture(props.item.img);
+  const texture = useTexture(item.img);
 
   useEffect(() => {
-    Object.entries(materials).map((material) => {
+    Object.entries(materials).forEach((material) => {
       // these are the material names that can't be changed color
       if (
         material[0] !== "zFdeDaGNRwzccye" &&
@@ -25,11 +25,11 @@ function Model(props) {
         material[0] !== "jlzuBkUzuJqgiAK" &&
         material[0] !== "xNrofRCqOXXHVZt"
       ) {
-        material[1].color = new THREE.Color(props.item.color[0]);
+        material[1].color = new THREE.Color(item.color[0]);
       }
       material[1].needsUpdate = true;
     });
-  }, [materials, props.item]);
+  }, [materials, item]);
 
   return (
     <group {...props} dispose={null}>
@@ -145,7 +145,7 @@ function Model(props) {
         material={materials.pIJKfZsazmcpEiU}
         scale={0.01}
       >
-        <meshStandardMaterial roughness={1} map={textuer} />
+        <meshStandardMaterial roughness={1} map={texture} />
       </mesh>
       <mesh
         castShadow
@@ -257,5 +257,3 @@ function Model(props) {
 }
 
 export default Model;
-
-useGLTF.preload("/models/scene.glb");
